@@ -1,5 +1,6 @@
 localhost ansible_connection=local
-
+ansible_user=livraisoncontinue   
+ansible_become_pass=000000
 [Server]
 localhost
 
