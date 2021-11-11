@@ -1,0 +1,21 @@
+---
+# tasks file for docker-registry.
+- name: Log into DockerHub
+  docker_login:
+    username: mohamedmselmi
+    password: mohamedmselmi
+    
+#- name: Tag and push to docker hub
+#  docker_image:
+#    name: mypipeline
+#    repository: mohamedmselmi/mypipeline
+#    tag: 7.0
+#    push: yes
+#    source: local
+    
+- name: Tag and push to docker hub
+  community.docker.docker_image:
+     name: mypipeline:latest
+     repository: mohamedmselmi/mypipeline:1.2
+     push: yes
+     source: local
